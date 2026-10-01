@@ -1,6 +1,18 @@
-# Issuer Authorization: Reviewer Reproduction Code
+# Issuer Authorization: Reproduction Code and Security Analysis
 
 Reproduction artifact for *Privacy-Preserving Verification of Fine-Grained Issuer Authorization for AI Agent Credentials*.
+
+## Extended security analysis
+
+Read the [complete security analysis in Markdown](proofs/security-proofs-rewrite.md) directly on GitHub. The matching [standalone LaTeX source](proofs/security-proofs-rewrite.tex) uses `amsmath`, `amssymb`, `amsthm`, `hyperref`, and `geometry` and can be compiled with `pdflatex`.
+
+The supplement expands the paper's authorization/one-more and issuer-privacy/unlinkability arguments into explicit definitions, lemmas, theorems, and proofs. It includes complete proof-refresh algebra, malicious-issuer completed-session privacy, source-content consistency for vector Pedersen commitments, final opening knowledge, selective-disclosure privacy, and historical-verification conditions. Each guarantee states its model and signing interfaces.
+
+- [Algorithm specification](proofs/algorithm-specification.md)
+- [Conference-to-extended claim map](proofs/security-claim-map.md)
+- [Proof assumptions and interface checklist](proofs/security-proof-checklist.md)
+
+The analysis accompanies manuscript/project revision `29ad482` of `compwjh/icc2027` and the reviewer code released here. Selective disclosure is specified mathematically; the saved computation and payload measurements use the hidden-vector presentation workflow.
 
 ## Code and instructions
 
@@ -18,4 +30,4 @@ The [2026-10-02 measurement report](code/experiment-remeasurement-20261002.md) r
 
 Historical measurements are labeled separately. Operation-median sums are not end-to-end network latency. The package is a locally generated reproduction workflow; its README describes the checks and encoding boundaries.
 
-This release contains code, reproduction instructions, and measurement records. The extended security analysis will be published separately when its document checks are complete.
+This release contains code, reproduction instructions, measurement records, and the extended security analysis in Markdown and LaTeX.
