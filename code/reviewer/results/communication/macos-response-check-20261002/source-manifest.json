@@ -1,0 +1,134 @@
+{
+  "algorithm": "SHA-256",
+  "generated_at_utc": "2026-10-01T16:34:33+00:00",
+  "files": [
+    {
+      "source_file": "benchmarks/communication.py",
+      "sha256": "843459844e9d87e7c681f9355259a20ee84d18a3da2039fca0f9e883f8d75a0d"
+    },
+    {
+      "source_file": "benchmarks/compute.py",
+      "sha256": "bc09aa106a8df400779980b6335faa17ad38f5a99238c45bfeba2cbeaa88853c"
+    },
+    {
+      "source_file": "benchmarks/measure_response_check.py",
+      "sha256": "4543ad7a3011012330ddb7adb6255a22ab3b63c80661353537850947fedf31e4"
+    },
+    {
+      "source_file": "examples/__init__.py",
+      "sha256": "1ceef8b1d970e1c0772f05ff102b63dc1ba82f2b24226ca0e01b52f0f4ed6a15"
+    },
+    {
+      "source_file": "examples/reviewer_flow.py",
+      "sha256": "8133310c3135226ff62289d187039d896fe23df17c793b9256bf1cf51d4d36d4"
+    },
+    {
+      "source_file": "requirements.txt",
+      "sha256": "4844ab35e35ba41f9fe5352f3fde0a021c32a0399e15184c61498701c8d81f8d"
+    },
+    {
+      "source_file": "src/native_blind_abs/__init__.py",
+      "sha256": "976b798989869a6670aee3e8c3d5ffa4dcc6c2469f32b5466cd901a34c76980c"
+    },
+    {
+      "source_file": "src/native_blind_abs/backends/__init__.py",
+      "sha256": "70142bd9e6c57e50be24e5cb008363ea435d07cc528967fad5e8dc2014deb6fd"
+    },
+    {
+      "source_file": "src/native_blind_abs/backends/arkworks_backend.py",
+      "sha256": "a09126fcd1fce13490e0d70c64612a8fab941e5c7a5aaf4f4f61144ded75ffef"
+    },
+    {
+      "source_file": "src/native_blind_abs/backends/base.py",
+      "sha256": "ff385f303e4e178d6389e172d19f083b22c891ab8974e51b55e6843907e67992"
+    },
+    {
+      "source_file": "src/native_blind_abs/backends/py_ecc_backend.py",
+      "sha256": "39ce778ea5760268ca6d01b27b093343ec76c039c32ea4e5f92f7ea31db6757f"
+    },
+    {
+      "source_file": "src/native_blind_abs/blind.py",
+      "sha256": "afe11a45baeac4a5646d4b31b744cb56cc91e82b522848645603216ba083b460"
+    },
+    {
+      "source_file": "src/native_blind_abs/commitment.py",
+      "sha256": "852aec05bb925c82640bb6df91fcf6fc7aaae006e193cc81fe72e81584d009ec"
+    },
+    {
+      "source_file": "src/native_blind_abs/core.py",
+      "sha256": "ddf6a97365968dea13e664800984dab329311e616f10c9b3f496459a89711eb4"
+    },
+    {
+      "source_file": "src/native_blind_abs/encoding.py",
+      "sha256": "fda953bf60b016db3d3965a55cc2e223d3e1d032bac3c60b8f63564241f0f36a"
+    },
+    {
+      "source_file": "src/native_blind_abs/groups.py",
+      "sha256": "97bde6686d5ea8c388b34dfa66eab319c4b6294c9c3d1a9a867e1b0d66b7bcc8"
+    },
+    {
+      "source_file": "src/native_blind_abs/gs.py",
+      "sha256": "0162cd38c96ddf53604e85b73dad5b51a49ad0869e0218a8593fdf1c529174e3"
+    },
+    {
+      "source_file": "src/native_blind_abs/hashing.py",
+      "sha256": "ff186accfe3a4039be1b10731bc380cb3f421fe475871267fe04019d16337291"
+    },
+    {
+      "source_file": "src/native_blind_abs/jr.py",
+      "sha256": "758b39cb9c951ad6edcc2a858d3348d4456c47a804cce25ff79d72bb2dc60a24"
+    },
+    {
+      "source_file": "src/native_blind_abs/lsss.py",
+      "sha256": "3740debb573304dc71b31c1ab0d9dff0f9c6c8cf20ad78b030eb206dea3d5341"
+    },
+    {
+      "source_file": "src/native_blind_abs/models.py",
+      "sha256": "ea0d05437a20b53aae41e01f7e0c1e38c96f156e00fd8a0e1598b2323b05d527"
+    },
+    {
+      "source_file": "src/native_blind_abs/policy.py",
+      "sha256": "ccdc39fc8b669fec2bd5de9f0545cf6b4ece7a94e30ff7abc08a57aff4fc2680"
+    },
+    {
+      "source_file": "src/native_blind_abs/proofs.py",
+      "sha256": "864e65f43744c9849efd6a60cda56ddcd8a352c3805162aa7c43dea719c74e52"
+    },
+    {
+      "source_file": "src/native_blind_abs/relations.py",
+      "sha256": "b91fc2c6f689cd0cfa95110ef3d0aac6cf2ffffc7b108d2917af4f2565de2f93"
+    },
+    {
+      "source_file": "src/native_blind_abs/serialization.py",
+      "sha256": "0262bd98335a1877310f89647c6a8379394fc752260a4c809f2c52c1c88717a0"
+    },
+    {
+      "source_file": "src/native_blind_abs/services.py",
+      "sha256": "a24c7ff3fbc274c474540ed1b9c3ff5c5884fa7303002f4d47b6a73ed2250cf6"
+    },
+    {
+      "source_file": "src/native_blind_abs/setup.py",
+      "sha256": "321f396561a1d770a744b1dcd3f01b734e8aa6779fd39ad80b4e0134def63f2f"
+    },
+    {
+      "source_file": "src/native_blind_abs/sps_eq.py",
+      "sha256": "135a0c9f384c28956c5b98a31fd096d59fafda902be595aa944d39c2f3b751ba"
+    },
+    {
+      "source_file": "src/native_blind_abs/transcript.py",
+      "sha256": "5185f9e45d0b755d23a27cb2d07db9077474e41f2ed42f5f3b72867307e059c2"
+    },
+    {
+      "source_file": "tests/__init__.py",
+      "sha256": "98e4b741f94bce86e097df591d27717fd34951240a017a6eea489e2ed63fb0d0"
+    },
+    {
+      "source_file": "tests/refresh_bypass_diagnostic.py",
+      "sha256": "0957e33d965fcdcc394bc873fcc834f4bc62d9f8fd498c1d46dd140e8022652f"
+    },
+    {
+      "source_file": "tests/test_reviewer_flow.py",
+      "sha256": "abbe36520bf65bd46ff9072fc77352ac45a158431f399159f67b552b4da81275"
+    }
+  ]
+}

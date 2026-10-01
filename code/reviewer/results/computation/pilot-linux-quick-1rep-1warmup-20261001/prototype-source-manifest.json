@@ -1,0 +1,18 @@
+{
+  "algorithm": "SHA-256",
+  "generated_at_utc": "2026-10-01T15:07:52+00:00",
+  "files": [
+    {
+      "source_file": "long3/code/IssuerAuthentication-S2R/src/native_blind_abs/blind.py",
+      "sha256": "74b88db2a93bf4350678c793ac86b4bcae3c048ffc3ba1c858880c3c506438c4"
+    },
+    {
+      "source_file": "long3/code/IssuerAuthentication-S2R/tests/native_blind_abs/test_paper_core_omissions.py",
+      "sha256": "3162c1adf25ba0b3b6e29b42653f4364b36251bddf813f2102690807364e0a82"
+    },
+    {
+      "source_file": "long3/code/IssuerAuthentication-S2R/tests/native_blind_abs/test_blind_flow.py",
+      "sha256": "4b2c22a0675cefa7bac1f5d1b90cecc09299bc909443028ce848016f8dd8d1fa"
+    }
+  ]
+}

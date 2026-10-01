@@ -1,0 +1,2 @@
+# Preserve exact artifact bytes, including raw CSV line endings.
+* -text

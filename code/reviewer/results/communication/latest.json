@@ -1,0 +1,1653 @@
+{
+  "metadata": {
+    "profile": "paper_core",
+    "python": "3.11.7 (main, Dec 15 2023, 12:09:56) [Clang 14.0.6 ]",
+    "py_ecc": "8.0.0",
+    "py_arkworks_bls12381": "0.5.0",
+    "group_backend": "Arkworks G1/G2 and pairing checks; py_ecc pairing and GT operations",
+    "permission_counts": [
+      3,
+      5,
+      10
+    ],
+    "n_definition": "n is the number of permission attributes",
+    "message_vector_length_L": 3,
+    "message_vector_values": [
+      26217937587563095239723870254092982918845276250263818911301829349969290592273,
+      26217937587563095239723870254092982918845276250263818911301829349969290592285,
+      26217937587563095239723870254092982918845276250263818911301829349969290592297
+    ],
+    "workflow": "identified VC -> anonymous VP; identical permission attributes and epoch",
+    "epoch": 7,
+    "roles": [
+      "RA",
+      "ledger",
+      "issuer",
+      "holder",
+      "verifier"
+    ],
+    "phases": [
+      "setup",
+      "issuer_registration",
+      "vc_issuance",
+      "vp_issuance",
+      "presentation_delivery"
+    ],
+    "presentation_challenge_accounting": "Before holder.complete_vp, the verifier-to-holder logical request is counted in presentation_delivery as three separately encoded components: required_policy using Policy.canonical_bytes(), required_epoch as u64, and nonce as a length-prefixed byte string. This is the measurement convention even when the application provisions policy or epoch in advance.",
+    "payload_accounting": "Canonical public serialization is used for public objects. AttributeCredential and CommitmentOpening use deterministic measurement-only encodings; output stores lengths only. Transport framing is excluded. network_payload_bytes counts each message once, while role sent/received totals count it at both endpoints.",
+    "unit_definition": "1 KiB = 1024 bytes",
+    "source_hashes": [
+      {
+        "source_file": "benchmarks/communication.py",
+        "sha256": "448bd06bcb1346196753133ca8f0cc633826631adc19b6ebe77dcc9aaf7f65c3"
+      },
+      {
+        "source_file": "benchmarks/compute.py",
+        "sha256": "23cc65c2ec5b51b3c37aad9c8cf10f3c455b7fecfe75dcae3f8f4128031bd1cf"
+      },
+      {
+        "source_file": "examples/__init__.py",
+        "sha256": "1ceef8b1d970e1c0772f05ff102b63dc1ba82f2b24226ca0e01b52f0f4ed6a15"
+      },
+      {
+        "source_file": "examples/reviewer_flow.py",
+        "sha256": "c2cd9e6a93f70a968d922b27fdd8a49835538bb5b99fa4c31769c8f71908bbd5"
+      },
+      {
+        "source_file": "requirements.txt",
+        "sha256": "4844ab35e35ba41f9fe5352f3fde0a021c32a0399e15184c61498701c8d81f8d"
+      },
+      {
+        "source_file": "src/native_blind_abs/__init__.py",
+        "sha256": "976b798989869a6670aee3e8c3d5ffa4dcc6c2469f32b5466cd901a34c76980c"
+      },
+      {
+        "source_file": "src/native_blind_abs/backends/__init__.py",
+        "sha256": "70142bd9e6c57e50be24e5cb008363ea435d07cc528967fad5e8dc2014deb6fd"
+      },
+      {
+        "source_file": "src/native_blind_abs/backends/arkworks_backend.py",
+        "sha256": "a09126fcd1fce13490e0d70c64612a8fab941e5c7a5aaf4f4f61144ded75ffef"
+      },
+      {
+        "source_file": "src/native_blind_abs/backends/base.py",
+        "sha256": "ff385f303e4e178d6389e172d19f083b22c891ab8974e51b55e6843907e67992"
+      },
+      {
+        "source_file": "src/native_blind_abs/backends/py_ecc_backend.py",
+        "sha256": "39ce778ea5760268ca6d01b27b093343ec76c039c32ea4e5f92f7ea31db6757f"
+      },
+      {
+        "source_file": "src/native_blind_abs/blind.py",
+        "sha256": "9f2e8a3519689e6cef3d53d46af815168f16b6f7e0e986085cec30040b572763"
+      },
+      {
+        "source_file": "src/native_blind_abs/commitment.py",
+        "sha256": "852aec05bb925c82640bb6df91fcf6fc7aaae006e193cc81fe72e81584d009ec"
+      },
+      {
+        "source_file": "src/native_blind_abs/core.py",
+        "sha256": "ddf6a97365968dea13e664800984dab329311e616f10c9b3f496459a89711eb4"
+      },
+      {
+        "source_file": "src/native_blind_abs/encoding.py",
+        "sha256": "fda953bf60b016db3d3965a55cc2e223d3e1d032bac3c60b8f63564241f0f36a"
+      },
+      {
+        "source_file": "src/native_blind_abs/groups.py",
+        "sha256": "97bde6686d5ea8c388b34dfa66eab319c4b6294c9c3d1a9a867e1b0d66b7bcc8"
+      },
+      {
+        "source_file": "src/native_blind_abs/gs.py",
+        "sha256": "0162cd38c96ddf53604e85b73dad5b51a49ad0869e0218a8593fdf1c529174e3"
+      },
+      {
+        "source_file": "src/native_blind_abs/hashing.py",
+        "sha256": "ff186accfe3a4039be1b10731bc380cb3f421fe475871267fe04019d16337291"
+      },
+      {
+        "source_file": "src/native_blind_abs/jr.py",
+        "sha256": "758b39cb9c951ad6edcc2a858d3348d4456c47a804cce25ff79d72bb2dc60a24"
+      },
+      {
+        "source_file": "src/native_blind_abs/lsss.py",
+        "sha256": "3740debb573304dc71b31c1ab0d9dff0f9c6c8cf20ad78b030eb206dea3d5341"
+      },
+      {
+        "source_file": "src/native_blind_abs/models.py",
+        "sha256": "ea0d05437a20b53aae41e01f7e0c1e38c96f156e00fd8a0e1598b2323b05d527"
+      },
+      {
+        "source_file": "src/native_blind_abs/policy.py",
+        "sha256": "ccdc39fc8b669fec2bd5de9f0545cf6b4ece7a94e30ff7abc08a57aff4fc2680"
+      },
+      {
+        "source_file": "src/native_blind_abs/proofs.py",
+        "sha256": "864e65f43744c9849efd6a60cda56ddcd8a352c3805162aa7c43dea719c74e52"
+      },
+      {
+        "source_file": "src/native_blind_abs/relations.py",
+        "sha256": "b91fc2c6f689cd0cfa95110ef3d0aac6cf2ffffc7b108d2917af4f2565de2f93"
+      },
+      {
+        "source_file": "src/native_blind_abs/serialization.py",
+        "sha256": "0262bd98335a1877310f89647c6a8379394fc752260a4c809f2c52c1c88717a0"
+      },
+      {
+        "source_file": "src/native_blind_abs/services.py",
+        "sha256": "a24c7ff3fbc274c474540ed1b9c3ff5c5884fa7303002f4d47b6a73ed2250cf6"
+      },
+      {
+        "source_file": "src/native_blind_abs/setup.py",
+        "sha256": "321f396561a1d770a744b1dcd3f01b734e8aa6779fd39ad80b4e0134def63f2f"
+      },
+      {
+        "source_file": "src/native_blind_abs/sps_eq.py",
+        "sha256": "135a0c9f384c28956c5b98a31fd096d59fafda902be595aa944d39c2f3b751ba"
+      },
+      {
+        "source_file": "src/native_blind_abs/transcript.py",
+        "sha256": "5185f9e45d0b755d23a27cb2d07db9077474e41f2ed42f5f3b72867307e059c2"
+      },
+      {
+        "source_file": "tests/test_reviewer_flow.py",
+        "sha256": "681e5dc7b94260c7ad09e877b15aa547f2cb4dd9032ae65f5f932c2373aa48de"
+      }
+    ],
+    "run_status": "complete",
+    "completed_messages": 30
+  },
+  "results": [
+    {
+      "permission_count": 3,
+      "n_definition": "n is the number of permission attributes",
+      "message_vector_length_L": 3,
+      "messages": [
+        {
+          "permission_count": 3,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "global-public-parameters",
+          "phase": "setup",
+          "sender": "RA",
+          "recipient": "ledger",
+          "context": null,
+          "components": [
+            {
+              "name": "PublicParams",
+              "encoding": "canonical-public",
+              "bytes": 2026
+            }
+          ],
+          "bytes": 2026
+        },
+        {
+          "permission_count": 3,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "issuer-public-key-registration",
+          "phase": "issuer_registration",
+          "sender": "issuer",
+          "recipient": "RA",
+          "context": null,
+          "components": [
+            {
+              "name": "IssuerPublicKey",
+              "encoding": "canonical-public",
+              "bytes": 335
+            }
+          ],
+          "bytes": 335
+        },
+        {
+          "permission_count": 3,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "attribute-authorization-request",
+          "phase": "issuer_registration",
+          "sender": "issuer",
+          "recipient": "RA",
+          "context": null,
+          "components": [
+            {
+              "name": "IssuerPublicKey",
+              "encoding": "canonical-public",
+              "bytes": 335
+            },
+            {
+              "name": "AuthorizationAttributesAndEpoch",
+              "encoding": "canonical-attribute-list",
+              "bytes": 395
+            }
+          ],
+          "bytes": 730
+        },
+        {
+          "permission_count": 3,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "issuer-attribute-credentials",
+          "phase": "issuer_registration",
+          "sender": "RA",
+          "recipient": "issuer",
+          "context": null,
+          "components": [
+            {
+              "name": "AttributeCredential",
+              "encoding": "private-measurement-only",
+              "bytes": 1010
+            },
+            {
+              "name": "AttributeCredential",
+              "encoding": "private-measurement-only",
+              "bytes": 1010
+            },
+            {
+              "name": "AttributeCredential",
+              "encoding": "private-measurement-only",
+              "bytes": 1010
+            },
+            {
+              "name": "AttributeCredential",
+              "encoding": "private-measurement-only",
+              "bytes": 1003
+            },
+            {
+              "name": "AttributeCredential",
+              "encoding": "private-measurement-only",
+              "bytes": 998
+            }
+          ],
+          "bytes": 5031
+        },
+        {
+          "permission_count": 3,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "vc-message-vector",
+          "phase": "vc_issuance",
+          "sender": "holder",
+          "recipient": "issuer",
+          "context": "identified-VC",
+          "components": [
+            {
+              "name": "MessageVector",
+              "encoding": "canonical-vector-scalars",
+              "bytes": 112
+            }
+          ],
+          "bytes": 112
+        },
+        {
+          "permission_count": 3,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "identified-vc-and-opening",
+          "phase": "vc_issuance",
+          "sender": "issuer",
+          "recipient": "holder",
+          "context": "identified-VC",
+          "components": [
+            {
+              "name": "Credential",
+              "encoding": "canonical-public",
+              "bytes": 39841
+            },
+            {
+              "name": "CommitmentOpening",
+              "encoding": "private-measurement-only",
+              "bytes": 248
+            }
+          ],
+          "bytes": 40089
+        },
+        {
+          "permission_count": 3,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "vp-blind-request",
+          "phase": "vp_issuance",
+          "sender": "holder",
+          "recipient": "issuer",
+          "context": "identified-to-anonymous",
+          "components": [
+            {
+              "name": "BlindRequest",
+              "encoding": "canonical-public",
+              "bytes": 40825
+            }
+          ],
+          "bytes": 40825
+        },
+        {
+          "permission_count": 3,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "vp-blind-response",
+          "phase": "vp_issuance",
+          "sender": "issuer",
+          "recipient": "holder",
+          "context": "anonymous-VP",
+          "components": [
+            {
+              "name": "BlindResponse",
+              "encoding": "canonical-public",
+              "bytes": 31964
+            }
+          ],
+          "bytes": 31964
+        },
+        {
+          "permission_count": 3,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "vp-verification-request",
+          "phase": "presentation_delivery",
+          "sender": "verifier",
+          "recipient": "holder",
+          "context": "anonymous-VP",
+          "components": [
+            {
+              "name": "RequiredPolicy",
+              "encoding": "policy-canonical-bytes",
+              "bytes": 327
+            },
+            {
+              "name": "RequiredEpoch",
+              "encoding": "u64-big-endian",
+              "bytes": 8
+            },
+            {
+              "name": "Nonce",
+              "encoding": "u32-length-prefixed-bytes",
+              "bytes": 45
+            }
+          ],
+          "bytes": 380
+        },
+        {
+          "permission_count": 3,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "anonymous-vp-presentation",
+          "phase": "presentation_delivery",
+          "sender": "holder",
+          "recipient": "verifier",
+          "context": "anonymous-VP",
+          "components": [
+            {
+              "name": "Presentation",
+              "encoding": "canonical-public",
+              "bytes": 32610
+            }
+          ],
+          "bytes": 32610
+        }
+      ],
+      "role_phase_totals": [
+        {
+          "role": "RA",
+          "phase": "setup",
+          "sent_bytes": 2026,
+          "received_bytes": 0,
+          "total_bytes": 2026,
+          "sent_kib": 1.978516,
+          "received_kib": 0.0,
+          "total_kib": 1.978516
+        },
+        {
+          "role": "ledger",
+          "phase": "setup",
+          "sent_bytes": 0,
+          "received_bytes": 2026,
+          "total_bytes": 2026,
+          "sent_kib": 0.0,
+          "received_kib": 1.978516,
+          "total_kib": 1.978516
+        },
+        {
+          "role": "issuer",
+          "phase": "setup",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "holder",
+          "phase": "setup",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "verifier",
+          "phase": "setup",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "RA",
+          "phase": "issuer_registration",
+          "sent_bytes": 5031,
+          "received_bytes": 1065,
+          "total_bytes": 6096,
+          "sent_kib": 4.913086,
+          "received_kib": 1.040039,
+          "total_kib": 5.953125
+        },
+        {
+          "role": "ledger",
+          "phase": "issuer_registration",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "issuer",
+          "phase": "issuer_registration",
+          "sent_bytes": 1065,
+          "received_bytes": 5031,
+          "total_bytes": 6096,
+          "sent_kib": 1.040039,
+          "received_kib": 4.913086,
+          "total_kib": 5.953125
+        },
+        {
+          "role": "holder",
+          "phase": "issuer_registration",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "verifier",
+          "phase": "issuer_registration",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "RA",
+          "phase": "vc_issuance",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "ledger",
+          "phase": "vc_issuance",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "issuer",
+          "phase": "vc_issuance",
+          "sent_bytes": 40089,
+          "received_bytes": 112,
+          "total_bytes": 40201,
+          "sent_kib": 39.149414,
+          "received_kib": 0.109375,
+          "total_kib": 39.258789
+        },
+        {
+          "role": "holder",
+          "phase": "vc_issuance",
+          "sent_bytes": 112,
+          "received_bytes": 40089,
+          "total_bytes": 40201,
+          "sent_kib": 0.109375,
+          "received_kib": 39.149414,
+          "total_kib": 39.258789
+        },
+        {
+          "role": "verifier",
+          "phase": "vc_issuance",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "RA",
+          "phase": "vp_issuance",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "ledger",
+          "phase": "vp_issuance",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "issuer",
+          "phase": "vp_issuance",
+          "sent_bytes": 31964,
+          "received_bytes": 40825,
+          "total_bytes": 72789,
+          "sent_kib": 31.214844,
+          "received_kib": 39.868164,
+          "total_kib": 71.083008
+        },
+        {
+          "role": "holder",
+          "phase": "vp_issuance",
+          "sent_bytes": 40825,
+          "received_bytes": 31964,
+          "total_bytes": 72789,
+          "sent_kib": 39.868164,
+          "received_kib": 31.214844,
+          "total_kib": 71.083008
+        },
+        {
+          "role": "verifier",
+          "phase": "vp_issuance",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "RA",
+          "phase": "presentation_delivery",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "ledger",
+          "phase": "presentation_delivery",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "issuer",
+          "phase": "presentation_delivery",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "holder",
+          "phase": "presentation_delivery",
+          "sent_bytes": 32610,
+          "received_bytes": 380,
+          "total_bytes": 32990,
+          "sent_kib": 31.845703,
+          "received_kib": 0.371094,
+          "total_kib": 32.216797
+        },
+        {
+          "role": "verifier",
+          "phase": "presentation_delivery",
+          "sent_bytes": 380,
+          "received_bytes": 32610,
+          "total_bytes": 32990,
+          "sent_kib": 0.371094,
+          "received_kib": 31.845703,
+          "total_kib": 32.216797
+        }
+      ],
+      "network_payload_bytes": 154102,
+      "network_payload_kib": 150.490234,
+      "endpoint_sent_received_total_bytes": 308204
+    },
+    {
+      "permission_count": 5,
+      "n_definition": "n is the number of permission attributes",
+      "message_vector_length_L": 3,
+      "messages": [
+        {
+          "permission_count": 5,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "global-public-parameters",
+          "phase": "setup",
+          "sender": "RA",
+          "recipient": "ledger",
+          "context": null,
+          "components": [
+            {
+              "name": "PublicParams",
+              "encoding": "canonical-public",
+              "bytes": 2026
+            }
+          ],
+          "bytes": 2026
+        },
+        {
+          "permission_count": 5,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "issuer-public-key-registration",
+          "phase": "issuer_registration",
+          "sender": "issuer",
+          "recipient": "RA",
+          "context": null,
+          "components": [
+            {
+              "name": "IssuerPublicKey",
+              "encoding": "canonical-public",
+              "bytes": 335
+            }
+          ],
+          "bytes": 335
+        },
+        {
+          "permission_count": 5,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "attribute-authorization-request",
+          "phase": "issuer_registration",
+          "sender": "issuer",
+          "recipient": "RA",
+          "context": null,
+          "components": [
+            {
+              "name": "IssuerPublicKey",
+              "encoding": "canonical-public",
+              "bytes": 335
+            },
+            {
+              "name": "AuthorizationAttributesAndEpoch",
+              "encoding": "canonical-attribute-list",
+              "bytes": 551
+            }
+          ],
+          "bytes": 886
+        },
+        {
+          "permission_count": 5,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "issuer-attribute-credentials",
+          "phase": "issuer_registration",
+          "sender": "RA",
+          "recipient": "issuer",
+          "context": null,
+          "components": [
+            {
+              "name": "AttributeCredential",
+              "encoding": "private-measurement-only",
+              "bytes": 1010
+            },
+            {
+              "name": "AttributeCredential",
+              "encoding": "private-measurement-only",
+              "bytes": 1010
+            },
+            {
+              "name": "AttributeCredential",
+              "encoding": "private-measurement-only",
+              "bytes": 1010
+            },
+            {
+              "name": "AttributeCredential",
+              "encoding": "private-measurement-only",
+              "bytes": 1010
+            },
+            {
+              "name": "AttributeCredential",
+              "encoding": "private-measurement-only",
+              "bytes": 1010
+            },
+            {
+              "name": "AttributeCredential",
+              "encoding": "private-measurement-only",
+              "bytes": 1003
+            },
+            {
+              "name": "AttributeCredential",
+              "encoding": "private-measurement-only",
+              "bytes": 998
+            }
+          ],
+          "bytes": 7051
+        },
+        {
+          "permission_count": 5,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "vc-message-vector",
+          "phase": "vc_issuance",
+          "sender": "holder",
+          "recipient": "issuer",
+          "context": "identified-VC",
+          "components": [
+            {
+              "name": "MessageVector",
+              "encoding": "canonical-vector-scalars",
+              "bytes": 112
+            }
+          ],
+          "bytes": 112
+        },
+        {
+          "permission_count": 5,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "identified-vc-and-opening",
+          "phase": "vc_issuance",
+          "sender": "issuer",
+          "recipient": "holder",
+          "context": "identified-VC",
+          "components": [
+            {
+              "name": "Credential",
+              "encoding": "canonical-public",
+              "bytes": 54883
+            },
+            {
+              "name": "CommitmentOpening",
+              "encoding": "private-measurement-only",
+              "bytes": 248
+            }
+          ],
+          "bytes": 55131
+        },
+        {
+          "permission_count": 5,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "vp-blind-request",
+          "phase": "vp_issuance",
+          "sender": "holder",
+          "recipient": "issuer",
+          "context": "identified-to-anonymous",
+          "components": [
+            {
+              "name": "BlindRequest",
+              "encoding": "canonical-public",
+              "bytes": 56033
+            }
+          ],
+          "bytes": 56033
+        },
+        {
+          "permission_count": 5,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "vp-blind-response",
+          "phase": "vp_issuance",
+          "sender": "issuer",
+          "recipient": "holder",
+          "context": "anonymous-VP",
+          "components": [
+            {
+              "name": "BlindResponse",
+              "encoding": "canonical-public",
+              "bytes": 46840
+            }
+          ],
+          "bytes": 46840
+        },
+        {
+          "permission_count": 5,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "vp-verification-request",
+          "phase": "presentation_delivery",
+          "sender": "verifier",
+          "recipient": "holder",
+          "context": "anonymous-VP",
+          "components": [
+            {
+              "name": "RequiredPolicy",
+              "encoding": "policy-canonical-bytes",
+              "bytes": 503
+            },
+            {
+              "name": "RequiredEpoch",
+              "encoding": "u64-big-endian",
+              "bytes": 8
+            },
+            {
+              "name": "Nonce",
+              "encoding": "u32-length-prefixed-bytes",
+              "bytes": 45
+            }
+          ],
+          "bytes": 556
+        },
+        {
+          "permission_count": 5,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "anonymous-vp-presentation",
+          "phase": "presentation_delivery",
+          "sender": "holder",
+          "recipient": "verifier",
+          "context": "anonymous-VP",
+          "components": [
+            {
+              "name": "Presentation",
+              "encoding": "canonical-public",
+              "bytes": 47652
+            }
+          ],
+          "bytes": 47652
+        }
+      ],
+      "role_phase_totals": [
+        {
+          "role": "RA",
+          "phase": "setup",
+          "sent_bytes": 2026,
+          "received_bytes": 0,
+          "total_bytes": 2026,
+          "sent_kib": 1.978516,
+          "received_kib": 0.0,
+          "total_kib": 1.978516
+        },
+        {
+          "role": "ledger",
+          "phase": "setup",
+          "sent_bytes": 0,
+          "received_bytes": 2026,
+          "total_bytes": 2026,
+          "sent_kib": 0.0,
+          "received_kib": 1.978516,
+          "total_kib": 1.978516
+        },
+        {
+          "role": "issuer",
+          "phase": "setup",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "holder",
+          "phase": "setup",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "verifier",
+          "phase": "setup",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "RA",
+          "phase": "issuer_registration",
+          "sent_bytes": 7051,
+          "received_bytes": 1221,
+          "total_bytes": 8272,
+          "sent_kib": 6.885742,
+          "received_kib": 1.192383,
+          "total_kib": 8.078125
+        },
+        {
+          "role": "ledger",
+          "phase": "issuer_registration",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "issuer",
+          "phase": "issuer_registration",
+          "sent_bytes": 1221,
+          "received_bytes": 7051,
+          "total_bytes": 8272,
+          "sent_kib": 1.192383,
+          "received_kib": 6.885742,
+          "total_kib": 8.078125
+        },
+        {
+          "role": "holder",
+          "phase": "issuer_registration",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "verifier",
+          "phase": "issuer_registration",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "RA",
+          "phase": "vc_issuance",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "ledger",
+          "phase": "vc_issuance",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "issuer",
+          "phase": "vc_issuance",
+          "sent_bytes": 55131,
+          "received_bytes": 112,
+          "total_bytes": 55243,
+          "sent_kib": 53.838867,
+          "received_kib": 0.109375,
+          "total_kib": 53.948242
+        },
+        {
+          "role": "holder",
+          "phase": "vc_issuance",
+          "sent_bytes": 112,
+          "received_bytes": 55131,
+          "total_bytes": 55243,
+          "sent_kib": 0.109375,
+          "received_kib": 53.838867,
+          "total_kib": 53.948242
+        },
+        {
+          "role": "verifier",
+          "phase": "vc_issuance",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "RA",
+          "phase": "vp_issuance",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "ledger",
+          "phase": "vp_issuance",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "issuer",
+          "phase": "vp_issuance",
+          "sent_bytes": 46840,
+          "received_bytes": 56033,
+          "total_bytes": 102873,
+          "sent_kib": 45.742188,
+          "received_kib": 54.719727,
+          "total_kib": 100.461914
+        },
+        {
+          "role": "holder",
+          "phase": "vp_issuance",
+          "sent_bytes": 56033,
+          "received_bytes": 46840,
+          "total_bytes": 102873,
+          "sent_kib": 54.719727,
+          "received_kib": 45.742188,
+          "total_kib": 100.461914
+        },
+        {
+          "role": "verifier",
+          "phase": "vp_issuance",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "RA",
+          "phase": "presentation_delivery",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "ledger",
+          "phase": "presentation_delivery",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "issuer",
+          "phase": "presentation_delivery",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "holder",
+          "phase": "presentation_delivery",
+          "sent_bytes": 47652,
+          "received_bytes": 556,
+          "total_bytes": 48208,
+          "sent_kib": 46.535156,
+          "received_kib": 0.542969,
+          "total_kib": 47.078125
+        },
+        {
+          "role": "verifier",
+          "phase": "presentation_delivery",
+          "sent_bytes": 556,
+          "received_bytes": 47652,
+          "total_bytes": 48208,
+          "sent_kib": 0.542969,
+          "received_kib": 46.535156,
+          "total_kib": 47.078125
+        }
+      ],
+      "network_payload_bytes": 216622,
+      "network_payload_kib": 211.544922,
+      "endpoint_sent_received_total_bytes": 433244
+    },
+    {
+      "permission_count": 10,
+      "n_definition": "n is the number of permission attributes",
+      "message_vector_length_L": 3,
+      "messages": [
+        {
+          "permission_count": 10,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "global-public-parameters",
+          "phase": "setup",
+          "sender": "RA",
+          "recipient": "ledger",
+          "context": null,
+          "components": [
+            {
+              "name": "PublicParams",
+              "encoding": "canonical-public",
+              "bytes": 2026
+            }
+          ],
+          "bytes": 2026
+        },
+        {
+          "permission_count": 10,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "issuer-public-key-registration",
+          "phase": "issuer_registration",
+          "sender": "issuer",
+          "recipient": "RA",
+          "context": null,
+          "components": [
+            {
+              "name": "IssuerPublicKey",
+              "encoding": "canonical-public",
+              "bytes": 335
+            }
+          ],
+          "bytes": 335
+        },
+        {
+          "permission_count": 10,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "attribute-authorization-request",
+          "phase": "issuer_registration",
+          "sender": "issuer",
+          "recipient": "RA",
+          "context": null,
+          "components": [
+            {
+              "name": "IssuerPublicKey",
+              "encoding": "canonical-public",
+              "bytes": 335
+            },
+            {
+              "name": "AuthorizationAttributesAndEpoch",
+              "encoding": "canonical-attribute-list",
+              "bytes": 941
+            }
+          ],
+          "bytes": 1276
+        },
+        {
+          "permission_count": 10,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "issuer-attribute-credentials",
+          "phase": "issuer_registration",
+          "sender": "RA",
+          "recipient": "issuer",
+          "context": null,
+          "components": [
+            {
+              "name": "AttributeCredential",
+              "encoding": "private-measurement-only",
+              "bytes": 1010
+            },
+            {
+              "name": "AttributeCredential",
+              "encoding": "private-measurement-only",
+              "bytes": 1010
+            },
+            {
+              "name": "AttributeCredential",
+              "encoding": "private-measurement-only",
+              "bytes": 1010
+            },
+            {
+              "name": "AttributeCredential",
+              "encoding": "private-measurement-only",
+              "bytes": 1010
+            },
+            {
+              "name": "AttributeCredential",
+              "encoding": "private-measurement-only",
+              "bytes": 1010
+            },
+            {
+              "name": "AttributeCredential",
+              "encoding": "private-measurement-only",
+              "bytes": 1010
+            },
+            {
+              "name": "AttributeCredential",
+              "encoding": "private-measurement-only",
+              "bytes": 1010
+            },
+            {
+              "name": "AttributeCredential",
+              "encoding": "private-measurement-only",
+              "bytes": 1010
+            },
+            {
+              "name": "AttributeCredential",
+              "encoding": "private-measurement-only",
+              "bytes": 1010
+            },
+            {
+              "name": "AttributeCredential",
+              "encoding": "private-measurement-only",
+              "bytes": 1010
+            },
+            {
+              "name": "AttributeCredential",
+              "encoding": "private-measurement-only",
+              "bytes": 1003
+            },
+            {
+              "name": "AttributeCredential",
+              "encoding": "private-measurement-only",
+              "bytes": 998
+            }
+          ],
+          "bytes": 12101
+        },
+        {
+          "permission_count": 10,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "vc-message-vector",
+          "phase": "vc_issuance",
+          "sender": "holder",
+          "recipient": "issuer",
+          "context": "identified-VC",
+          "components": [
+            {
+              "name": "MessageVector",
+              "encoding": "canonical-vector-scalars",
+              "bytes": 112
+            }
+          ],
+          "bytes": 112
+        },
+        {
+          "permission_count": 10,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "identified-vc-and-opening",
+          "phase": "vc_issuance",
+          "sender": "issuer",
+          "recipient": "holder",
+          "context": "identified-VC",
+          "components": [
+            {
+              "name": "Credential",
+              "encoding": "canonical-public",
+              "bytes": 92512
+            },
+            {
+              "name": "CommitmentOpening",
+              "encoding": "private-measurement-only",
+              "bytes": 248
+            }
+          ],
+          "bytes": 92760
+        },
+        {
+          "permission_count": 10,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "vp-blind-request",
+          "phase": "vp_issuance",
+          "sender": "holder",
+          "recipient": "issuer",
+          "context": "identified-to-anonymous",
+          "components": [
+            {
+              "name": "BlindRequest",
+              "encoding": "canonical-public",
+              "bytes": 94077
+            }
+          ],
+          "bytes": 94077
+        },
+        {
+          "permission_count": 10,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "vp-blind-response",
+          "phase": "vp_issuance",
+          "sender": "issuer",
+          "recipient": "holder",
+          "context": "anonymous-VP",
+          "components": [
+            {
+              "name": "BlindResponse",
+              "encoding": "canonical-public",
+              "bytes": 84042
+            }
+          ],
+          "bytes": 84042
+        },
+        {
+          "permission_count": 10,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "vp-verification-request",
+          "phase": "presentation_delivery",
+          "sender": "verifier",
+          "recipient": "holder",
+          "context": "anonymous-VP",
+          "components": [
+            {
+              "name": "RequiredPolicy",
+              "encoding": "policy-canonical-bytes",
+              "bytes": 943
+            },
+            {
+              "name": "RequiredEpoch",
+              "encoding": "u64-big-endian",
+              "bytes": 8
+            },
+            {
+              "name": "Nonce",
+              "encoding": "u32-length-prefixed-bytes",
+              "bytes": 45
+            }
+          ],
+          "bytes": 996
+        },
+        {
+          "permission_count": 10,
+          "n_definition": "n is the number of permission attributes",
+          "message_vector_length_L": 3,
+          "message": "anonymous-vp-presentation",
+          "phase": "presentation_delivery",
+          "sender": "holder",
+          "recipient": "verifier",
+          "context": "anonymous-VP",
+          "components": [
+            {
+              "name": "Presentation",
+              "encoding": "canonical-public",
+              "bytes": 85269
+            }
+          ],
+          "bytes": 85269
+        }
+      ],
+      "role_phase_totals": [
+        {
+          "role": "RA",
+          "phase": "setup",
+          "sent_bytes": 2026,
+          "received_bytes": 0,
+          "total_bytes": 2026,
+          "sent_kib": 1.978516,
+          "received_kib": 0.0,
+          "total_kib": 1.978516
+        },
+        {
+          "role": "ledger",
+          "phase": "setup",
+          "sent_bytes": 0,
+          "received_bytes": 2026,
+          "total_bytes": 2026,
+          "sent_kib": 0.0,
+          "received_kib": 1.978516,
+          "total_kib": 1.978516
+        },
+        {
+          "role": "issuer",
+          "phase": "setup",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "holder",
+          "phase": "setup",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "verifier",
+          "phase": "setup",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "RA",
+          "phase": "issuer_registration",
+          "sent_bytes": 12101,
+          "received_bytes": 1611,
+          "total_bytes": 13712,
+          "sent_kib": 11.817383,
+          "received_kib": 1.573242,
+          "total_kib": 13.390625
+        },
+        {
+          "role": "ledger",
+          "phase": "issuer_registration",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "issuer",
+          "phase": "issuer_registration",
+          "sent_bytes": 1611,
+          "received_bytes": 12101,
+          "total_bytes": 13712,
+          "sent_kib": 1.573242,
+          "received_kib": 11.817383,
+          "total_kib": 13.390625
+        },
+        {
+          "role": "holder",
+          "phase": "issuer_registration",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "verifier",
+          "phase": "issuer_registration",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "RA",
+          "phase": "vc_issuance",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "ledger",
+          "phase": "vc_issuance",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "issuer",
+          "phase": "vc_issuance",
+          "sent_bytes": 92760,
+          "received_bytes": 112,
+          "total_bytes": 92872,
+          "sent_kib": 90.585938,
+          "received_kib": 0.109375,
+          "total_kib": 90.695312
+        },
+        {
+          "role": "holder",
+          "phase": "vc_issuance",
+          "sent_bytes": 112,
+          "received_bytes": 92760,
+          "total_bytes": 92872,
+          "sent_kib": 0.109375,
+          "received_kib": 90.585938,
+          "total_kib": 90.695312
+        },
+        {
+          "role": "verifier",
+          "phase": "vc_issuance",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "RA",
+          "phase": "vp_issuance",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "ledger",
+          "phase": "vp_issuance",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "issuer",
+          "phase": "vp_issuance",
+          "sent_bytes": 84042,
+          "received_bytes": 94077,
+          "total_bytes": 178119,
+          "sent_kib": 82.072266,
+          "received_kib": 91.87207,
+          "total_kib": 173.944336
+        },
+        {
+          "role": "holder",
+          "phase": "vp_issuance",
+          "sent_bytes": 94077,
+          "received_bytes": 84042,
+          "total_bytes": 178119,
+          "sent_kib": 91.87207,
+          "received_kib": 82.072266,
+          "total_kib": 173.944336
+        },
+        {
+          "role": "verifier",
+          "phase": "vp_issuance",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "RA",
+          "phase": "presentation_delivery",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "ledger",
+          "phase": "presentation_delivery",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "issuer",
+          "phase": "presentation_delivery",
+          "sent_bytes": 0,
+          "received_bytes": 0,
+          "total_bytes": 0,
+          "sent_kib": 0.0,
+          "received_kib": 0.0,
+          "total_kib": 0.0
+        },
+        {
+          "role": "holder",
+          "phase": "presentation_delivery",
+          "sent_bytes": 85269,
+          "received_bytes": 996,
+          "total_bytes": 86265,
+          "sent_kib": 83.270508,
+          "received_kib": 0.972656,
+          "total_kib": 84.243164
+        },
+        {
+          "role": "verifier",
+          "phase": "presentation_delivery",
+          "sent_bytes": 996,
+          "received_bytes": 85269,
+          "total_bytes": 86265,
+          "sent_kib": 0.972656,
+          "received_kib": 83.270508,
+          "total_kib": 84.243164
+        }
+      ],
+      "network_payload_bytes": 372994,
+      "network_payload_kib": 364.251953,
+      "endpoint_sent_received_total_bytes": 745988
+    }
+  ]
+}
